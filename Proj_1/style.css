@@ -1,14 +1,17 @@
 body {
-  font-family: Afacad Flux;
+  font-family: "Afacad Flux", sans-serif; /* Fix the font-family */
   font-weight: 400;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
+
+  min-height: 100vh; /* Minimum height for the viewport */
 }
 
 header {
+  grid-column: 1 / -1; /* Span across all columns */
+  grid-row: 1;
   background-color: #215679;
   color: white;
   padding: 10px;
@@ -29,67 +32,63 @@ nav a {
   text-decoration: none;
 }
 
+.main-pic {
+  grid-row: 2;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  background-color: #333;
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+}
+
+.pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0px 65%;
+}
+
 main {
-  flex: 1;
-  padding-left: 100px;
-  padding-right: 100px;
+  display: contents; /* Allow the main sections to use grid directly */
+}
+
+.left-section,
+.right-section {
+  padding: 30px;
+}
+
+.main-section {
   padding-top: 30px;
-  background-color: #f4f4f4;
 }
 
 footer {
+  grid-column: 1 / -1; /* Span across all columns */
   background-color: #333;
   color: white;
   text-align: center;
   padding: 10px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-.main-content {
-  display: flex;
-  height: auto;
-  display: flex;
-}
-
-.left-section {
-  flex: 1;
-  padding: 20px;
-  border: 1px solid #ccc;
-  display: flex;
-  justify-content: right;
-  width: auto;
-}
-
-.right-section {
-  flex: 1;
-  padding: 20px;
-  border: 1px solid #ccc;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  width: auto;
-}
-
 .clock-container {
-  text-align: center; /* Center text inside the clock container */
+  text-align: center;
 }
 
 .time {
-  font-size: 48px; /* Clock font size */
-  color: #333; /* Clock text color */
-  padding: 20px; /* Padding around the clock */
+  font-size: 40px; /* Clock font size */
+  color: #ffffff; /* Clock text color */
+  padding: 10px 0px 10px 10px; /* Padding around the clock */
   border-radius: 10px; /* Rounded corners */
-  background-color: #fff; /* Background color for clock */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  justify-content: center;
 }
 
 .date {
-  font-size: 24px; /* Smaller font size for date */
-  color: #666; /* Lighter color for date */
+  font-size: 20px; /* Smaller font size for date */
+  color: #ffffff; /* Lighter color for date */
+  justify-content: center;
 }
