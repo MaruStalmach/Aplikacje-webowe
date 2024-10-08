@@ -131,3 +131,9 @@ input[type="submit"]:hover {
   flex-direction: column;
   width: 100%;
 }
+
+textarea,
+input {
+  font-family: "Afacad Flux", sans-serif;
+  font-weight: 400;
+}
