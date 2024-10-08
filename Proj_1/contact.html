@@ -3,7 +3,7 @@
   <head>
     <meta ="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_contact.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Afacad+Flux&display=swap"
@@ -21,22 +21,34 @@
     </header>
 
     <main>
-      <div class="main-content">
-        <div class="left-section">
-          <div class="contact-info">
-            <h1>Informacje kontaktowe</h1>
-            <h2>+48 123 456 789</h2>
-            <h2>email@email.com</h2>
-            <div class="socials">
-              <h1>Gdzie mnie znaleźć?</h1>
-            </div>
+      <div class="main-section">
+        <div class="form"><h1>Uzupełnij formularz kontaktowy</h1><br>
+        <form action="#" method="post">
+          <div class="form-mail">
+            <label for="email">E-Mail*:</label>
+            <input type="text" id="email" name="email" required />
           </div>
-        </div>
-        <div class="right-section">
-          <div class="profile-pic">
-            <img src="me2.jpg" width="500" />
+
+          <div class="form-subj">
+            <label for="subject">Temat wiadomości*:</label>
+            <input type="text" id="subject" name="subject" required />
           </div>
-        </div>
+
+          <div class="form-text">
+            <label for="message">Wiadomość*:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              cols="50"
+              required
+            ></textarea>
+            <input type="submit" value="Wyślij" />
+            
+          </div>
+
+          
+        </form>
       </div>
     </main>
 
@@ -46,5 +58,8 @@
         <div id="time" class="time"></div>
       </div>
     </footer>
+
+    <script src="script.js"></script>
+    <!-- Make sure the script is after the content -->
   </body>
 </html>
