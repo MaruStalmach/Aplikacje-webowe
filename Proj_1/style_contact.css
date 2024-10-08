@@ -1,26 +1,25 @@
-body {
-  font-family: "Afacad Flux", sans-serif;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-
 header {
   grid-column: 1 / -1;
   grid-row: 1;
-  background-color: #215679;
+  background-color: #02101a;
   color: white;
   padding: 10px;
-  text-align: center;
+  text-align: right;
   position: sticky;
   top: 0;
 }
 
+.intro {
+  position: absolute;
+  top: 55vh;
+  left: 10vh;
+  font-size: 64px;
+  font-weight: 600;
+  color: white;
+}
+
 nav {
-  margin: 10px 0;
+  margin: 10px 10px 10px 10px;
 }
 
 nav a {
@@ -60,9 +59,10 @@ main {
 }
 
 .main-section h1 {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 600;
   margin: 0;
+  display: fl;
 }
 
 footer {

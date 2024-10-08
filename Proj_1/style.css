@@ -11,16 +11,25 @@ body {
 header {
   grid-column: 1 / -1;
   grid-row: 1;
-  background-color: #215679;
+  background-color: #02101a;
   color: white;
   padding: 10px;
-  text-align: center;
+  text-align: right;
   position: sticky;
   top: 0;
 }
 
+.intro {
+  position: absolute;
+  top: 55vh;
+  left: 10vh;
+  font-size: 64px;
+  font-weight: 600;
+  color: white;
+}
+
 nav {
-  margin: 10px 0;
+  margin: 10px 10px 10px 10px;
 }
 
 nav a {
@@ -55,18 +64,23 @@ main {
 
 .main-section {
   grid-row: 2; /* Text content in the second row */
-  padding: 4vh 4vh 20vh 20vh;
+  padding: 10vh 10vh 10vh 10vh;
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   align-items: flex-start; /* Align items to the left */
   justify-content: flex-start; /* Align content to the top */
   gap: 10px;
-  padding-top: 50px;
 }
 
 .main-section h1 {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 600;
+  margin: 0;
+}
+
+.main-section p {
+  font-size: 24px;
+  font-weight: 400;
   margin: 0;
 }
 
