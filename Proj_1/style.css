@@ -150,3 +150,25 @@ input[type="submit"]:hover {
   flex-direction: column;
   width: 100%;
 }
+
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.gallery-pic {
+  width: auto;
+  height: 300px;
+  padding: 20px;
+}
+
+.grow {
+  transform: scale(1.05);
+}
+
+.grow:hover {
+  transform: all 0.2s ease-in-out;
+}
