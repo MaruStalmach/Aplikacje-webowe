@@ -47,6 +47,10 @@ main {
   grid-template-rows: auto 1fr; /* Two rows: one for the image and one for the content */
 }
 
+.pfp {
+  width: 40vh;
+}
+
 .main-pic {
   grid-row: 1; /* Image in the first row */
   display: flex;
@@ -54,6 +58,22 @@ main {
   width: 100%;
   height: 65vh; /* Set height for the image section */
   overflow: hidden;
+}
+
+.video-row {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: ;
+}
+
+iframe {
+  width: 70vh;
+}
+
+video {
+  width: 70vh;
 }
 
 .pic {
@@ -65,12 +85,27 @@ main {
 
 .main-section {
   grid-row: 2; /* Text content in the second row */
-  padding: 10vh 10vh 10vh 10vh;
+  padding: 10vh 10vh 0vh 10vh;
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   align-items: flex-start; /* Align items to the left */
   justify-content: flex-start; /* Align content to the top */
   gap: 10px;
+}
+.about {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.section {
+  padding-top: 50px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column !important;
 }
 
 .main-section h1 {
