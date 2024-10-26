@@ -105,7 +105,7 @@ video {
 
 .main-section {
   grid-row: 2;
-  padding: 10vh 30vh 0vh 30vh;
+  padding: 10vh 40vh 0vh 40vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -288,7 +288,7 @@ p {
   }
 
   .music-img {
-    width: 40vw;
+    width: 30%;
   }
 
   nav a {
