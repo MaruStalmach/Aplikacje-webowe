@@ -23,14 +23,14 @@ header {
 .intro {
   position: absolute;
   top: 55vh;
-  left: 10vh;
-  font-size: 64px;
+  left: 30vh;
+  font-size: 100px;
   font-weight: 600;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 nav {
-  margin: 10px 10px 10px 10px;
+  margin: 10px;
 }
 
 nav a {
@@ -44,7 +44,7 @@ nav a {
 main {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr; /* Two rows: one for the image and one for the content */
+  grid-template-rows: auto 1fr;
 }
 
 .pfp {
@@ -52,28 +52,48 @@ main {
 }
 
 .main-pic {
-  grid-row: 1; /* Image in the first row */
+  grid-row: 1;
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 65vh; /* Set height for the image section */
+  height: 65vh;
   overflow: hidden;
+  background: black;
 }
 
-.video-row {
-  padding-top: 50px;
+.video-row,
+.music-section {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  align-items: ;
+}
+
+.video-row {
+  padding-bottom: 100px;
+}
+
+.music {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.small-iframe {
+  max-width: 100px !important;
+}
+
+.music-img {
+  width: 20vw;
 }
 
 iframe {
-  width: 70vh;
+  width: 100%;
+  height: auto;
 }
 
 video {
-  width: 70vh;
+  width: 50%;
+  height: auto;
 }
 
 .pic {
@@ -84,14 +104,15 @@ video {
 }
 
 .main-section {
-  grid-row: 2; /* Text content in the second row */
-  padding: 10vh 10vh 0vh 10vh;
+  grid-row: 2;
+  padding: 10vh 30vh 0vh 30vh;
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: flex-start; /* Align items to the left */
-  justify-content: flex-start; /* Align content to the top */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 10px;
 }
+
 .about {
   padding-top: 20px;
   display: flex;
@@ -101,6 +122,7 @@ video {
 
 .section {
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .about-text {
@@ -152,11 +174,12 @@ a:hover {
 
 form {
   display: flex;
-  flex-direction: column; /* Arrange items in a column */
+  flex-direction: column;
 }
+
 label {
-  margin-bottom: 5px; /* Space between label and input */
-  font-weight: bold; /* Make labels bold */
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 input[type="text"],
@@ -164,8 +187,9 @@ textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-bottom: 15px; /* Space between inputs */
+  margin-bottom: 15px;
 }
+
 input[type="submit"] {
   padding: 10px;
   background-color: #28a745;
@@ -174,8 +198,9 @@ input[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
 }
+
 input[type="submit"]:hover {
-  background-color: #218838; /* Darker green on hover */
+  background-color: #218838;
 }
 
 .form-mail,
@@ -192,7 +217,6 @@ input[type="submit"]:hover {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: flex-start;
-  padding-top: 50px;
   padding-bottom: 100px;
 }
 
@@ -201,23 +225,22 @@ input[type="submit"]:hover {
 }
 
 .gallery-container {
-  position: relative; /* This ensures the text will be centered relative to the image */
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* The text should be absolutely positioned inside the container */
 .img-description {
   position: absolute;
   width: 100%;
   height: 100%;
   color: white;
-  font-size: 24px; /* Adjust as needed */
+  font-size: 24px;
   font-weight: bold;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -234,4 +257,77 @@ h1 {
 
 p {
   margin: 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 1200px) {
+  .intro {
+    font-size: 60px;
+    top: 40vh;
+    left: 20vh;
+  }
+
+  .main-section {
+    padding: 5vh 20vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    font-size: 40px;
+    top: 30vh;
+    left: 10vh;
+  }
+
+  .main-pic {
+    height: 50vh;
+  }
+
+  .main-section {
+    padding: 5vh 10vh;
+  }
+
+  .music-img {
+    width: 40vw;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  .main-section h1 {
+    font-size: 30px;
+  }
+
+  .main-section p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+    font-size: 30px;
+    top: 25vh;
+    left: 5vh;
+  }
+
+  .main-section {
+    padding: 5vh;
+  }
+
+  .music-img {
+    width: 60vw;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  .main-section h1 {
+    font-size: 24px;
+  }
+
+  .main-section p {
+    font-size: 18px;
+  }
 }
