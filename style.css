@@ -126,6 +126,11 @@ video {
   height: 50vh;
 }
 
+.contact-img div {
+  overflow: hidden;
+  width: 40vw;
+}
+
 .about {
   padding-top: 20px;
   display: flex;
