@@ -12,10 +12,15 @@
   </head>
   <body>
     <script>
-      let name;
-      do {
-        name = window.prompt("Enter your name to enter the website", "");
-      } while (!name);
+      let name = localStorage.getItem("userName");
+      if (!name) {
+        do {
+          name = window.prompt("Enter your name to enter the website", "");
+        } while (!name);
+        localStorage.setItem("userName", name);
+      }
+
+      console.log(`Welcome, ${name}!`);
     </script>
     <header>
       <nav>
@@ -34,8 +39,8 @@
         <h1>The purpose of this website</h1>
         <p>
           The website was prepared as a part of a project for the subject
-          "Basics of Web Applications" on the Data Science 2024/25 course on AGH
-          University of Science and Technology.
+          "Basics ofa Web Applications" on the Data Science 2024/25 course on
+          AGH University of Science and Technology.
         </p>
         <div class="section">
           <h1>About me</h1>
