@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta ="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -15,41 +15,53 @@
       <nav>
         <a href="index.html">Home</a>
         <a href="gallery.html">Gallery</a>
-    
         <a href="contact.html">Contact</a>
       </nav>
     </header>
 
     <main>
-      <div class="main-section">
-        <h1>Uzupełnij formularz kontaktowy</h1>
-        <div class="form"><br>
-        <form action="#" method="post">
-          <div class="form-mail">
-            <label for="email">E-Mail*:</label>
-            <input type="text" id="email" name="email" required placeholder="Wprowadź swój adres"/>
-          </div>
+      <div class="main-section-contact">
+        <div><img class="contact-img" src="GÓY.jpg" /></div>
+        <div class="form-box">
+          <br />
+          <h1 class="form">Uzupełnij formularz kontaktowy</h1>
+          <form action="#" method="post">
+            <div class="form-mail">
+              <label for="email">E-Mail*:</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                required
+                placeholder="Wprowadź swój adres"
+              />
+            </div>
 
-          <div class="form-subj">
-            <label for="subject">Temat*:</label>
-            <input type="text" id="subject" name="subject" placeholder="Temat wiadomości" required />
-          </div>
+            <div class="form-subj">
+              <label for="subject">Temat*:</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Temat wiadomości"
+                required
+              />
+            </div>
 
-          <div class="form-text">
-            <label for="message">Wiadomość*:</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              cols="50"
-              required placeholder="Wprowadź treść"
-            ></textarea>
-            <input type="submit" value="Wyślij" />
-            
-          </div>
-
-          
-        </form>
+            <div class="form-text">
+              <label for="message">Wiadomość*:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                cols="50"
+                required
+                placeholder="Wprowadź treść"
+              ></textarea>
+              <input type="submit" value="Wyślij" />
+            </div>
+          </form>
+        </div>
       </div>
     </main>
 
@@ -61,6 +73,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <!-- Make sure the script is after the content -->
   </body>
 </html>
