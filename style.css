@@ -9,7 +9,6 @@ body {
 }
 
 header {
-  grid-column: 1 / -1;
   grid-row: 1;
   background-color: #02101a;
   color: white;
@@ -42,6 +41,7 @@ nav a {
 }
 
 main {
+  width: ;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
@@ -69,7 +69,7 @@ main {
 }
 
 .video-row {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .music {
@@ -105,7 +105,7 @@ video {
 
 .main-section {
   grid-row: 2;
-  padding: 10vh 40vh 0vh 40vh;
+  padding: 10vh 30vh 0vh 30vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -288,7 +288,7 @@ p {
   }
 
   .music-img {
-    width: 30%;
+    width: 40vw;
   }
 
   nav a {
