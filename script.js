@@ -28,27 +28,13 @@ Today();
 
 setInterval(Clock, 1000);
 
-// fullscreen images
-document.addEventListener("DOMContentLoaded", function () {
-  const galleryImages = document.querySelectorAll(".gallery-pic");
+//form submission
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  galleryImages.forEach((img) => {
-    img.addEventListener("click", () => {
-      // Request fullscreen and handle browser-specific prefixes
-      if (img.requestFullscreen) {
-        img.requestFullscreen().catch((err) => console.log(err));
-      } else if (img.webkitRequestFullscreen) {
-        img.webkitRequestFullscreen();
-      } else if (img.msRequestFullscreen) {
-        img.msRequestFullscreen();
-      }
-    });
-  });
+    alert("Message sent successfully, thank you for getting in touch!");
 
-  document.addEventListener("fullscreenchange", () => {
-    // Remove 'fullscreen-active' if no element is in fullscreen
-    if (!document.fullscreenElement) {
-      document.body.classList.remove("fullscreen-active");
-    }
+    this.reset();
   });
-});
