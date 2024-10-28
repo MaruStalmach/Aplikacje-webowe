@@ -13,20 +13,20 @@ header {
   background-color: #02101a;
   color: white;
   padding: 10px;
-  display: flex; /* Use flexbox to align items */
-  align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Space between logo and nav */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo-container {
-  flex-shrink: 0; /* Prevent logo from shrinking */
+  flex-shrink: 0;
 }
 
 .logo {
-  width: 80px; /* Set a fixed width for the logo */
+  width: 80px;
   padding-left: 30px;
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 20px; /* Space between logo and nav */
+  height: auto;
+  margin-right: 20px;
 }
 
 .intro {
@@ -92,7 +92,7 @@ main {
 
 .music-img {
   width: 20vw;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
 }
 
 iframe {
@@ -102,12 +102,12 @@ iframe {
 
 video {
   width: 35vw;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
 }
 
 .pic {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
   object-fit: cover;
   object-position: 0px 65%;
 }
@@ -121,19 +121,18 @@ video {
   gap: 10px;
 }
 
-/* Updated layout for contact section */
 .main-section-contact {
   display: flex;
-  flex-direction: row; /* Align items in a row */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  padding: 10vh 20vh; /* Maintain padding for space around */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10vh 20vh;
 }
 
 .contact-img {
-  max-height: 50vh; /* Set a maximum height for the image */
-  width: auto; /* Maintain aspect ratio */
-  margin-right: 30px; /* Space between image and form */
+  max-height: 50vh;
+  width: auto;
+  margin-right: 30px;
 }
 
 .form-box {
@@ -141,8 +140,8 @@ video {
   flex-direction: column;
   padding: 0;
   margin: 0;
-  width: 100%; /* Allow form to fill available width */
-  max-width: 600px; /* Set a maximum width for the form */
+  width: 100%;
+  max-width: 600px;
 }
 
 .about {
@@ -258,7 +257,7 @@ input[type="submit"]:hover {
 
 .gallery-pic {
   height: 300px;
-  width: auto; /* Maintain aspect ratio */
+  width: auto;
 }
 
 .gallery-container {
@@ -296,7 +295,41 @@ p {
   margin: 0;
 }
 
-/* Media Queries */
+textarea {
+  font-size: 18px;
+}
+
+input {
+  font-size: 18px;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Afacad Flux", sans-serif;
+  font-size: 18px;
+  color: #7e7e7e;
+  background-color: #fff;
+  appearance: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+select::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #333;
+}
+
 @media (max-width: 1200px) {
   .intro {
     font-size: 60px;
@@ -310,21 +343,21 @@ p {
 
 @media (max-width: 768px) {
   .main-section-contact {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    padding: 5vh 10vh; /* Adjust padding for smaller screens */
+    flex-direction: column;
+    align-items: center;
+    padding: 5vh 10vh;
   }
 
   .contact-img {
-    width: 80%; /* Adjust width for smaller screens */
-    height: auto; /* Ensure image maintains aspect ratio */
-    margin-right: 0; /* Remove right margin for stacking */
-    margin-bottom: 20px; /* Add bottom margin for spacing */
+    width: 80%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 
   .form-box {
-    width: 100%; /* Allow form to fill available width */
-    max-width: none; /* Remove max-width for mobile */
+    width: 100%;
+    max-width: none;
   }
 
   .intro {
@@ -369,8 +402,8 @@ p {
     padding: 2vh;
   }
   .contact-img {
-    height: 25vh; /* Use height as per your layout */
-    width: auto; /* Maintain aspect ratio */
+    height: 25vh;
+    width: auto;
   }
   .intro {
     font-size: 30px;
