@@ -1,0 +1,53 @@
+<body>
+    <style>
+        body {
+            background-color: black;
+            margin: 0; 
+            overflow: hidden;
+        }
+
+        canvas {
+            background-image: url("board-bg.jpg");
+            background-size: cover; 
+            background-position: center; 
+            display: block; 
+            width: 100vw; 
+            height: 100vh;
+        }
+
+        #crosshair {
+            position: fixed;
+            display: block;          
+            pointer-events: none;    
+            transform: translate(-50%, -50%); 
+            z-index: 1000;           
+            width: 200px;
+            height: 200px;
+        }
+        #alertDialog {
+            display: none;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #000;
+            padding: 20px;
+            z-index: 1000;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+    </style>
+
+    <img id="crosshair" src="aim.png" />
+    <div id="alertDialog" style="display: none; position: absolute; background: white; border: 2px solid black; padding: 20px; z-index: 1000; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+        <p id="YOU LOST"></p>
+        <button id="TRY AGAIN?">OK</button>
+    </div>
+    
+
+    <canvas id="gameCanvas"></canvas>
+
+    <script src="index.js"></script>
+</body>
